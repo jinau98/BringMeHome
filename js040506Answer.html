@@ -1,0 +1,241 @@
+<html>
+<head>
+<title></title>
+
+<script>
+/*
+   function Student(){
+      var frm = document.myForm;
+      this.no = frm.bun.value ;
+      this.name = frm.name.value ;
+      this.kor = Number(frm.kor.value) ;
+      this.eng = Number(frm.eng.value) ;
+      this.math = Number(frm.math.value) ;
+   }
+      아이디를 가져와서 아래는 파라미터를 가져와서
+*/
+   function Student(no, name, kor, eng, math){
+      this.no = no ;
+      this.name = name ;
+      this.kor = Number(kor);
+      this.eng = Number(eng);
+      this.math = Number(math);
+
+      this.getTotal = function(){
+         return this.kor + this.eng + this.math;
+      }
+
+      this.getAverage = function(){
+         return (this.kor + this.eng + this.math) / 3;
+      }
+   }
+
+   function printScore(){
+      if(!validate()){
+         return;
+      }
+   
+
+   var frm = document.myform;
+   var no = frm.bun.value;
+   var name = frm.name.value;
+   var kor = frm.kor.value;
+   var eng = frm.eng.value;
+   var math = frm.math.value;
+
+   //var stu = new Student(); 아이디를 가져와서 클래스 선언할때 객체생성
+   var stu = new Student(no, name, kor, eng, math);
+
+   var output = "";
+   output += "번호 : " + stu.no + "<br />";
+   output += "이름 : " + stu.name + "<br />";
+   output += "국어 : " + stu.kor + "<br />";
+   output += "영어 : " + stu.eng + "<br />";
+   output += "수학 : " + stu.math + "<br />";
+   output += "합계 : " + stu.getTotal() + "<br />";
+   output += "평균 : " + stu.getAverage() + "<br />";
+   document.getElementById("content").innerHTML += output;
+   frm.reset();
+   }
+   function validate(){
+      var frm = document.myform;
+
+      if(frm.bun.value == ""){
+         alert("번호를 입력해주세요.");
+         return false;
+      }
+      if(frm.name.value == ""){
+         alert("이름을 입력해주세요.");
+         return false;
+      }
+      if(frm.kor.value == ""){
+         alert("국어점수를 입력해주세요.");
+         return false;
+      }else{
+         if(isNaN(frm.kor.value)){
+            alert("숫자로 입력해주세요.");
+               return false;
+         }
+      }
+      if(frm.eng.value == ""){
+         alert("영어점수을 입력해주세요.");
+         return false;
+      }else{
+         if(isNaN(frm.eng.value)){
+            alert("숫자로 입력해주세요.");
+               return false;
+         }
+      }
+      if(frm.math.value == ""){
+         alert("수학점수을 입력해주세요.");
+         return false;
+      }else{
+         if(isNaN(frm.math.value)){
+            alert("숫자로 입력해주세요.");
+               return false;
+         }
+      }
+      return true;
+   }
+
+
+</script><html>
+    <head>
+    <title></title>
+    
+    <script>
+    /*
+       function Student(){
+          var frm = document.myForm;
+          this.no = frm.bun.value ;
+          this.name = frm.name.value ;
+          this.kor = Number(frm.kor.value) ;
+          this.eng = Number(frm.eng.value) ;
+          this.math = Number(frm.math.value) ;
+       }
+          아이디를 가져와서 아래는 파라미터를 가져와서
+    */
+       function Student(no, name, kor, eng, math){
+          this.no = no ;
+          this.name = name ;
+          this.kor = Number(kor);
+          this.eng = Number(eng);
+          this.math = Number(math);
+    
+          this.getTotal = function(){
+             return this.kor + this.eng + this.math;
+          }
+    
+          this.getAverage = function(){
+             return (this.kor + this.eng + this.math) / 3;
+          }
+       }
+    
+       function printScore(){
+          if(!validate()){
+             return;
+          }
+       
+    
+       var frm = document.myform;
+       var no = frm.bun.value;
+       var name = frm.name.value;
+       var kor = frm.kor.value;
+       var eng = frm.eng.value;
+       var math = frm.math.value;
+    
+       //var stu = new Student(); 아이디를 가져와서 클래스 선언할때 객체생성
+       var stu = new Student(no, name, kor, eng, math);
+    
+       var output = "";
+       output += "번호 : " + stu.no + "<br />";
+       output += "이름 : " + stu.name + "<br />";
+       output += "국어 : " + stu.kor + "<br />";
+       output += "영어 : " + stu.eng + "<br />";
+       output += "수학 : " + stu.math + "<br />";
+       output += "합계 : " + stu.getTotal() + "<br />";
+       output += "평균 : " + stu.getAverage() + "<br />";
+       document.getElementById("content").innerHTML += output;
+       frm.reset();
+       }
+       function validate(){
+          var frm = document.myform;
+    
+          if(frm.bun.value == ""){
+             alert("번호를 입력해주세요.");
+             return false;
+          }
+          if(frm.name.value == ""){
+             alert("이름을 입력해주세요.");
+             return false;
+          }
+          if(frm.kor.value == ""){
+             alert("국어점수를 입력해주세요.");
+             return false;
+          }else{
+             if(isNaN(frm.kor.value)){
+                alert("숫자로 입력해주세요.");
+                   return false;
+             }
+          }
+          if(frm.eng.value == ""){
+             alert("영어점수을 입력해주세요.");
+             return false;
+          }else{
+             if(isNaN(frm.eng.value)){
+                alert("숫자로 입력해주세요.");
+                   return false;
+             }
+          }
+          if(frm.math.value == ""){
+             alert("수학점수을 입력해주세요.");
+             return false;
+          }else{
+             if(isNaN(frm.math.value)){
+                alert("숫자로 입력해주세요.");
+                   return false;
+             }
+          }
+          return true;
+       }
+    
+    
+    </script>
+    </head>
+    
+    <body>
+       
+       <form name = "myform">
+          <label>번호</label> <input type="text" name="bun"/><br />
+          <label>이름</label> <input type="text" name="name"/><br />
+          <label>국어</label> <input type="text" name="kor"/><br />
+          <label>영어</label> <input type="text" name="eng"/><br />
+          <label>수학</label> <input type="text" name="math"/><br />
+          <input type="button" value="계산" onclick = "printScore()"/>
+          <input type="reset" value="초기화" />
+       </form>
+       <div id="content">
+       </div>
+    
+    
+    </body>
+    </html>
+</head>
+
+<body>
+   
+   <form name = "myform">
+      <label>번호</label> <input type="text" name="bun"/><br />
+      <label>이름</label> <input type="text" name="name"/><br />
+      <label>국어</label> <input type="text" name="kor"/><br />
+      <label>영어</label> <input type="text" name="eng"/><br />
+      <label>수학</label> <input type="text" name="math"/><br />
+      <input type="button" value="계산" onclick = "printScore()"/>
+      <input type="reset" value="초기화" />
+   </form>
+   <div id="content">
+   </div>
+
+
+</body>
+</html>
