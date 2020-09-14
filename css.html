@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title> 아이디 선택자</title>
+
+<style>
+/*
+margin : 0은 좌우 여백 주지 않음, auto는 중앙 정렬 - 같이 사용 시 좌우 여백 균등하게 배분.
+*/
+
+	#header{
+		width : 800px; margin : 0 auto;
+		background : red;
+	}
+
+	#wrap{
+		width : 800px; margin : 0 auto;
+		/* overflow는 내용이 요소의 크기를 벗어났을 때 처리 방법*/
+		/* visible, hidden, scroll, auto(scroll 자동 생성), initial(기본값 설정), inherit(부모 요소의 속성값 상속) */
+		overflow : hidden;
+		}
+	
+	#aside{
+		width : 200px; float : left;
+		background : green;
+	}
+
+	#content{
+		width : 600px; float : right;
+		background : blue;
+	}
+
+
+	</style>
+
+	</head>
+
+	<body>
+		<div id="header">
+			<h1> header </h1>
+		</div>
+
+		<div id="wrap">
+			<div id="aside">
+				<h1> aside </h1>
+			</div>
+
+		    <div id="content">
+			    <h1> content </h1>
+		    </div>
+		</div>
+
+	</body>
+</html>

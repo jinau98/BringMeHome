@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script>
+        var person ={
+            myName : "Harry",
+            myAge : 22,
+
+            info : function(){
+                return "person : " + this.myName + "," + this.myAge;
+            }
+        }
+
+        for(var key in person){
+            document.write(key+" : " + person[key] + "<br/>");
+        }
+
+        document.write("<h1> in </h1>");
+        document.write(key + " : " + ('myName'in person) + "<br/>");
+
+        document.write("<h1>with</h1>");
+        with(person){
+            document.write("myName : " + myName + "<br/>");
+            document.write("myAge : " + myAge + "<br/>");
+            document.write("info() -  "+ info() + "<br/>");
+        }
+
+        delete(person.info);
+
+        person.myGender = "female";
+
+        person.toString = function(){
+            var output = "";
+
+            for(var key in this){
+                if(key != "toString"){
+                    output += key + " : " + this[key] + "\n";
+                }
+            }
+            return output
+        }
+        alert(person.toString());
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>

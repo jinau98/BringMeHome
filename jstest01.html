@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script>
+        var sum=0;
+        var inp=prompt('숫자를 입력하세요', '');
+        if(isNaN(inp) == true){
+            alert("숫자가 아닙니다.");
+        }else{
+            nums = new Array(inp.length)
+            for(var i=0; i<inp.length; i++){
+                nums[i] = inp.substr(i,1);
+
+                sum = sum + eval(nums[i]);
+            }
+            document.write(sum);
+            
+        }
+            
+        
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>

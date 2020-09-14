@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script>
+        delete(person.myinfo);
+
+        person.myGender = "female";
+
+        person.toString = function(){
+            var output = "";
+
+            for(var key in this){
+                if(key != "toString"){
+                    output += key + " : " + this[key] + "\n";
+                }
+            }
+            return output
+        }
+        alert(person.toString());
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>

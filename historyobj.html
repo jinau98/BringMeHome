@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script>
+        function Forward(){
+            history.forward();
+        }
+
+        function Back(){
+            history.back();
+        }
+
+        function Show(){
+            var cnt = history.length;
+            alert("히스토리 리스트에는" + cnt + "개 있습니다.");
+        }
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" value="앞으로" onclick="Forward()">
+    <input type="button" value="뒤로" onclick="Back()">
+    <input type="button" value="개수표시" onclick="Show()">
+</body>
+</html>

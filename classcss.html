@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title> 클래스 선택자</title>
+
+	<style>
+	.select{ color : red;   }
+	.item { color : white;}
+	.header{background-color : red;}
+	li.select { color : green; }
+	</style>
+
+	</head>
+
+	<body>
+
+	<ul>
+      <li>list1</li>
+      <li class="select">list2</li>
+      <li>list3</li>
+      <li class="select">list4</li>
+   </ul>
+	<ol>
+   		<li>list1</li>
+		<li>list2</li>
+		<li class="select">list3</li>
+		<li>list4</li>
+	</ol>
+
+	<h1 class="item header"> 여러 개의 클래스 선택자 사용, 공백으로 구분</h1>
+
+	<h1 class="header item"> 순서를 바꿔서 사용 가능 </h1>
+	</body>
+</html>

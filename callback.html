@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script>
+        var callbackEx = function(num){
+            document.write(num+"callbackEx 등장");
+        }
+
+        function callTenTime(callback){
+            for(var i=0; i<10; i++){
+                callback(i+1);
+                document.write("을 포함하는 callTenTime 등장!")
+            }
+            
+        }
+        callTenTime(callbackEx);
+    </script>
+
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>

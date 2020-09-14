@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script>
+        function addHtml(){
+            var output= "<h1 id='header'>HEADER</h1>";
+            document.body.innerHTML += output;
+        }
+        function change(){
+            document.getElementById("header");
+            header.innerHTML = "회원가입 화면";
+
+            var btn = document.getElementById("modify");
+            btn.value = "변경완료";
+        }
+        function validate(){
+            var frm = document.myForm;
+
+            if(frm.memName.value==""){
+                alert("이름을 입력해주세요.");
+                frm.pw.focus();
+                return;
+            }
+
+            alert(frm.memName.value);
+            
+            if(frm.pwchk.value ==""){
+                alert("비밀번호를 입력해주세요");
+                frm.pw.focus();
+                return;
+            }else{
+                if(frm.pw.value != frm.pwchk.value){
+                    alert("비밀번호가 맞지 않습니다.");
+                    return;
+                }
+            }
+        }
+    </script>
+    <title>Document</title>
+</head>
+<body onload="addHtml()">
+    <form name="myForm">
+        <input type="text" name="memName"/> <br/>
+        <input type="password" name="pw"/><br/>
+        <input type="password" name="pwchk" /><br/>
+
+        <input type="reset" value="변경" id="modify" onclick="change()"/><br/>
+        <input type="reset" value="초기화" id="clear"/>
+        <input type="button" value="전송" id="send" onclick="validate()"/>
+    </form>
+</body>
+</html>

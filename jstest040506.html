@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+   
+    <title>Document</title>
+</head>
+<body>
+    <form name="myForm">
+    번호 : <input type="text" name="no"><br/>
+    이름 : <input type="text" name="sname"><br/>
+    국어 : <input type="text" name="kor" value="100" ><br/>
+    영어 : <input type="text" name="eng" value="95"><br/>
+    수학 : <input type="text" name="mat" value="100"><br/>
+    <input type="button" value="계산" onclick="result()">
+    </form>
+
+</body>
+<script>
+
+    var frm = document.myForm;
+    function Student(){
+        this.name;
+        this.ban;
+        this.no;
+        this.kor=frm.kor.value;
+        this.eng=frm.eng.value;
+        this.math=frm.mat.value;
+
+        this.getTotal = function(){
+            return Number(this.kor) + Number(this.eng) + Number(this.math);
+        }
+
+        this.getAverage = function(){
+            return (Number(this.kor) + Number(this.eng) + Number(this.math)) / 3;
+        }
+    }
+    function result(){
+        var me = new Student();
+        document.body.innerHTML+="<p>"+me.getTotal()+"<br/>"+me.getAverage()+"</p>";
+    }
+</script>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script>
+        var array1 = new Array(100,200,300,400,500);
+        var array2 = [1,2,3,4,5];
+
+        document.write("array2[3] = " + array2[3] + "<br/>");
+
+        document.write("concaat 전 배열의 개수 : " + array1.length + "<br/>");
+
+        var array3 = array1.concat(array2);
+        document.write("concat 후 배열의 개수 : " + array3.length + "<br/>");
+
+        var array3 = array1.concat(array2);
+        document.write("concat 후 배열의 개수 : " + array3.length + "<br/>");
+
+        document.write("join : " + array3.join("/") + "<br/>");
+
+        document.write("pop : " + array3.pop() + "<br/>");
+        document.write("pop후 length" + array3.length + "<br/>");
+
+        array3.push(6);
+        document.write("push 후 toString : " + array3.toString() + "<br/>");
+        document.write("push 후 length : " + array3.length + "<br/>");
+
+        document.write("reverse : " + array3.reverse() + "<br/>");
+
+        document.write("sort : " + array3.sort() + "<br/>");
+
+        document.write("slice : " + array3.slice(0,3) + "<br/>");
+
+        document.write("splice : " + array3.splice(0,3) + "<br/>");
+        document.write("splice 후 크기 : " + array3.length + "<br/>");
+        document.write("splice 후 남은 값 : " + array3.toString() + "<br/>");
+
+        document.write("isArray : " + Array.isArray(array3) + "<br/>");
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>

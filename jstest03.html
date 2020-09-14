@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script>
+        
+        var sum=0;
+        function outp(){
+            var frm = document.myForm;
+            
+            if(isNaN(frm.inpNum.value)){
+                document.body.innerHTML+="숫자가 아닙니다.";
+            }else{
+                inp = Number(frm.inpNum.value);
+                sum=sum + inp;
+                document.body.innerHTML+="입력 값 : " + inp + " 누적 값 : " + sum+"<br/>";
+            }
+
+        }            
+
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    <form name="myForm">
+        <input type="text" name="inpNum"/>
+        <input type="button" value="출력" onclick="outp()"/><br/>
+
+    </form>
+</body>
+</html>

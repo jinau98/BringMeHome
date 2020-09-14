@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script>
+        function click(){
+            alert("document click");
+        }
+        document.onclick = click;       //document가 클릭을 했을 때 실행
+        function buttonClick(){
+            alert("button click");
+        }
+    </script>
+    <title>Document</title>
+</head>
+<body onload="alert('welcome!!')">
+    <input type="button" value="클릭" onclick="buttonClick()">
+    
+</body>
+</html>

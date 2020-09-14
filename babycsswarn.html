@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title> 후손 선택자 주의사항 </title>
+	<style>
+	/* id가 header인 후손에 해당하는 h1에 적용, 모든 h2에 적용 */
+	/*	#header h1, h2{color : red;} */
+	/* id가 header인 후손에 해당하는 h1, h2에 적용 */
+	#header h1, #header h2 {color : red;}
+	</style>
+</head>
+
+<!-- 결과 예측해보기-->
+
+<body>
+	<div id = "header">
+		<h1 class="title"> 후손 선택자 header</h1>
+		<h2> Lorem ipsum </h2>
+		<div id="nav">
+			<h1> Navigation	</h1>
+		</div>
+	</div>
+
+	<div id="section">
+		<h1 class="title"> 후손 선택자 selection</h1>
+		<h2>Lorem ipsum</h2>
+	</div>
+</body>
+</html>

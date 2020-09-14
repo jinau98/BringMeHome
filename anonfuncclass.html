@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script>
+        var person ={
+            myName : "Harry",
+            myAge : 22,
+
+            info : function(){
+                return "person : " + this.myName + "," + this.myAge;
+            }
+        }
+
+        document.write("myName : "+ person.myName + "<br/>");
+        document.write("myAge : " + person["myAge"] + "<br/>");
+        document.write("info() " + person.info() + "<br/>");
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>

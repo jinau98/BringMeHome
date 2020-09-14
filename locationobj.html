@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script>
+        function view(){
+            alert(location.href);
+        }
+        function Go(type){
+            if(type==1){
+                location.replace("http://www.daum.net");
+            }else if(type==2){
+                location.href="http://www.daum.net";
+            }
+        }
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" value="문서 정보 보기" onclick="view()">
+    <input type="button" value="replace" onclick="Go(1)">
+    <input type="button" value="href" onclick="Go(2)">
+</body>
+</html>

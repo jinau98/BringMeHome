@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script>
+        var str="Lorem ! ipsum dolor sit amet, consectetur adipiscing elit";
+
+        document.write("charAt() : " + str.charAt(3) + "<br/>");
+        document.write("substring() : " + str.substring(0,5) + "<br/>");
+
+        document.write("substr() : " + str.substr(0,6) + "<br/>");
+
+        document.write("slice() 양수 : " + str.slice(0,5) + "<br/>");
+        document.write("slice() 음수 : " + str.slice(6, -5) + "<br/>");
+
+        var strArray = str.split(",");
+        document.write("split() : " + strArray[0] + "<br/>");
+        document.write("split() : " + strArray[1] + "<br/>");
+
+        document.write("replace() : " + str.replace("!", "#") + "<br/>");
+        document.write("indexOf() : " + str.indexOf("dolor") + "<br/>");
+        
+        document.write("lastIndexOf() : " + str.lastIndexOf("elit") + "<br/>");
+
+        document.write("toLowerCase() : " + str.toLowerCase() + "</br>");
+        document.write("toUpperCase() : " + str.toUpperCase() + "<br/>");
+
+        var str = " text   ";
+        alert("공백 제거 전 :" + str + "++");
+        alert("공백 제거 후 :" + str.trim() + "++");
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
